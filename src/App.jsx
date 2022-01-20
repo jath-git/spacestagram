@@ -32,7 +32,8 @@ class App extends Component {
     if (date.string === latestDate.string || this.state.data.length > 500) {
       return;
     } else {
-      this.addData(date.nextDate());
+      date.nextDate();
+      this.addData(date);
     }
   }
 
