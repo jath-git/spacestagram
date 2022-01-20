@@ -9,9 +9,7 @@ const latestDate = new SimpleDate(nowDate.getFullYear(), nowDate.getMonth() + 1,
 const months31 = [1, 3, 5, 7, 8, 10, 12];
 
 class FunctionalDate extends SimpleDate {
-    constructor(year, month, date) {
-        super(year, month, date);
-    }
+    // construct same way as SimpleData
 
     // get next valid date and update string field accordingly
     nextDate = () => {
