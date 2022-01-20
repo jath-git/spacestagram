@@ -91,7 +91,7 @@ class App extends Component {
     this.setState({ data: newData });
 
     // store new data
-    setTimeout(() => localStorage.setItem('data', JSON.stringify(this.state.data)), 5000);
+    setTimeout(() => localStorage.setItem('data', JSON.stringify(newData)), 0);
   }
 
   render = () => {
