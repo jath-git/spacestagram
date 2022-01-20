@@ -2,14 +2,14 @@
 // https://image-spacestagram.netlify.app
 
 // theme colours
-$background: #353a3b;
-$block: #657175;
-$button: #fecea8;
-$buttonHover: #ff847c;
+$background: black;
+$block: rgba(115, 117, 122, 0.747);
+$button: #49686e;
+$buttonHover: #a14741;
 $shadow: #374142;
 
 body {
-    background-color: $background;
+    background-image: url('../public/assets/stars.jpg')
 }
 
 .app {
@@ -30,7 +30,6 @@ body {
             text-transform: uppercase;
             text-align: center;
             font-size: 3vw;
-            background-color: $block;
 
             margin: auto;
             padding: 1vh 4vw;
