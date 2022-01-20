@@ -5,7 +5,6 @@ import { Component, createRef } from 'react';
 import Image from './components/Image';
 import './App.scss';
 import FunctionalDate, { latestDate } from './classes/FunctionalDate';
-const apiKey = 'GVOJ4vu8cMAdBi1abcT0oXCVZeRCOwqgc7LM0hrY';
 
 class App extends Component {
   // initialize react state and ref
@@ -20,7 +19,7 @@ class App extends Component {
   addData = (date) => {
     // retrieve nasa object on given date
     // checked if date is valid before function call
-    fetch(`https://api.nasa.gov/planetary/apod?date=${date.string}&api_key=${apiKey}`)
+    fetch(`https://api.nasa.gov/planetary/apod?date=${date.string}&api_key=${process.env.REACT_APP_API_KEY}`)
       .then(res => res.json())
       .then(dataElement => {
         // add object to data
@@ -99,7 +98,7 @@ class App extends Component {
     return (
       <div className="app">
         <div className="form block">
-          <h1 className="title">Spacestagram</h1>
+          <h1 className="title">Planetary Spacestagram</h1>
           <label>Start Date:</label>
           <input type="date" ref={this.startDate} />
           <div className="button" onClick={this.setStartDate}>Submit</div>
