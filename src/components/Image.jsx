@@ -1,3 +1,6 @@
+// This App is Deployed. See Live Site at:
+// https://image-spacestagram.netlify.app
+
 import React from 'react'
 
 export default function Image({ data, index, toggleLike }) {

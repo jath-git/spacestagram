@@ -1,3 +1,6 @@
+// This App is Deployed. See Live Site at:
+// https://image-spacestagram.netlify.app
+
 import { Component, createRef } from 'react';
 import Image from './components/Image';
 import './App.scss';
