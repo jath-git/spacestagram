@@ -1,6 +1,13 @@
 ### This App is Deployed. See Live Site at:
 [https://image-spacestagram.netlify.app](https://image-spacestagram.netlify.app)
 
+### Features:
+- Save Likes (user leaves or reloads)
+- Add Date-Picker (photos starting from a specific date)
+
+### View Backend Project at:
+[https://inventory-tracker-app.netlify.app](https://inventory-tracker-app.netlify.app)
+
 <br/>
 
 ### Instructions

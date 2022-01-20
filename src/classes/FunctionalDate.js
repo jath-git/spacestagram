@@ -13,6 +13,7 @@ class FunctionalDate extends SimpleDate {
         super(year, month, date);
     }
 
+    // get next valid date and update string field accordingly
     nextDate = () => {
         if (this.date === 31) {
             this.date = 1;
@@ -49,6 +50,7 @@ class FunctionalDate extends SimpleDate {
         this.updateString();
     }
 
+    // check if date is within range [earliestDate, latestDate]
     isValidDate = () => {
         if (this.year > earliestDate.year && this.year < latestDate.year) {
             return true;

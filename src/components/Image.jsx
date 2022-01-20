@@ -3,6 +3,7 @@
 
 import React from 'react'
 
+// block of nasa object with image and details
 export default function Image({ data, index, toggleLike }) {
     const { date, src, title, description, author, like } = data[index];
 
