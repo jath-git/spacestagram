@@ -50,12 +50,6 @@ class App extends Component {
       this.setState({ data: data });
       return;
     }
-
-    // otherwise, create new data starting from startDate
-    const startDate = localStorage.getItem('startDate');
-    if (startDate) {
-      this.addData(this.convertStringToDate(startDate));
-    }
   }
 
   // parser creates FunctionalDate to modify fields later
@@ -86,10 +80,8 @@ class App extends Component {
     // append new data objects
     this.addData(functionalStartDate);
 
-    // store new data and startDate in client storage
-    setTimeout(() =>
-      localStorage.setItem('data', JSON.stringify(this.state.data)), 5000);
-    localStorage.setItem('startDate', startDate);
+    // store new datain client storage
+    setTimeout(() => localStorage.setItem('data', JSON.stringify(this.state.data)), 5000);
   }
 
   toggleLike = (index) => {
@@ -98,20 +90,19 @@ class App extends Component {
     newData[index].like = !newData[index].like;
     this.setState({ data: newData });
 
-    // store new data (startDate is already stored)
-    setTimeout(() =>
-      localStorage.setItem('data', JSON.stringify(newData)), 0);
+    // store new data
+    setTimeout(() => localStorage.setItem('data', JSON.stringify(this.state.data)), 5000);
   }
 
   render = () => {
     return (
       <div className="app">
-        <form className="block">
+        <div className="form block">
           <h1 className="title">Spacestagram</h1>
           <label>Start Date:</label>
           <input type="date" ref={this.startDate} />
           <div className="button" onClick={this.setStartDate}>Submit</div>
-        </form>
+        </div>
 
         <div className="gram" >
           {
