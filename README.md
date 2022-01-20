@@ -2,8 +2,8 @@
 [https://image-spacestagram.netlify.app](https://image-spacestagram.netlify.app)
 
 ### Features:
-- Save Likes (user leaves or reloads)
 - Add Date-Picker (photos starting from a specific date)
+- Save Likes After 5 Seconds (user leaves or reloads)
 
 ### View Backend Project at:
 [https://inventory-tracker-app.netlify.app](https://inventory-tracker-app.netlify.app)
