@@ -91,16 +91,17 @@ class App extends Component {
 
     const data = JSON.parse(retrieveData);
     const startDate = localStorage.getItem('startDate');
-    if (data && startDate && data.length > 0) {
+    if (data && data.length > 0) {
+      this.setState({ data: data });
+    } else if (startDate) {
       this.addData(this.convertStringToDate(startDate));
     }
   }
 
   isValidDate = date => {
-    const field = 'year';
-    if (date[field] > earliestDate[field] && date[field] < latestDate[field]) {
+    if (date.year > earliestDate.year && date.year < latestDate.year) {
       return true;
-    } else if (date[field] < earliestDate[field] && date[field] > latestDate[field]) {
+    } else if (date.year < earliestDate.year || date.year > latestDate.year) {
       return false;
     }
 
@@ -118,6 +119,7 @@ class App extends Component {
     } else if (date.month > latestDate.month) {
       return false;
     }
+
     return date.date <= latestDate.date;
   }
 
@@ -157,8 +159,8 @@ class App extends Component {
   render = () => {
     return (
       <div className="app">
-        <h1>Spacestagram</h1>
         <form className="block">
+          <h1 className="title">Spacestagram</h1>
           <label>Start Date:</label>
           <input type="date" ref={this.startDate} />
           <div className="button" onClick={this.setStartDate}>Submit</div>
