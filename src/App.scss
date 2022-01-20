@@ -1,19 +1,36 @@
+// theme colours
+$background: #353a3b;
+$block: #657175;
+$button: #fecea8;
+$buttonHover: #ff847c;
+$shadow: #374142;
+
+body {
+    background-color: $background;
+}
+
 .app {
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
-    h1 {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 3vw;
-    }
+    top: 0;
+    left: 0;
+    position: absolute;
 
     form {
         text-align: center;
         margin: auto;
-        width: fit-content;
-        padding: 1% 15%;
-        border-radius: 0px;
+        width: 90%;
         font-weight: bold;
+        margin-top: 2vh;
+
+        .title {
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 3vw;
+            background-color: $block;
+
+            margin: auto;
+            padding: 1vh 4vw;
+        }
 
         label,
         .button,
@@ -48,6 +65,7 @@
 
             img {
                 width: 100%;
+                cursor: pointer;
             }
 
             .center {
@@ -78,25 +96,31 @@
 }
 
 .block {
-    background-color: lightgray;
-    box-shadow: 4px 6px 6px gray;
+    background-color: $block;
+    box-shadow: 4px 5px 5px rgb(48, 48, 49);
 }
 
-.button {
-    background-color: gray;
+.button,
+.disabled {
     font-size: 1.35vw;
     width: fit-content;
     margin: auto;
     padding: 2% 5%;
     border-radius: 50px;
-    margin-bottom: 4%;
     cursor: pointer;
-    background-color: rgb(167, 73, 49);
-    // text-transform: uppercase;
     font-weight: bold;
+    margin-bottom: 2vh;
 
     &:hover {
-        background-color: rgb(94, 38, 25);
+        background-color: $buttonHover;
         color: whitesmoke;
     }
+}
+
+.button {
+    background-color: $button;
+}
+
+.disabled {
+    background-color: darkgray;
 }
