@@ -19,7 +19,7 @@ class App extends Component {
   addData = (date) => {
     // retrieve nasa object on given date
     // checked if date is valid before function call
-    fetch(`https://api.nasa.gov/planetary/apod?date=${date.string}&api_key=${process.env.REACT_APP_API_KEY}`)
+    fetch(`https://api.nasa.gov/planetary/apod?date=${date.string}&api_key=${process.env.REACT_APP_API_KEY || 'DEMO_KEY'}`)
       .then(res => res.json())
       .then(dataElement => {
         // add object to data
