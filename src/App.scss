@@ -3,13 +3,13 @@
 
 // theme colours
 $background: black;
-$block: rgba(115, 117, 122, 0.747);
+$block: lightgrey;
 $button: #49686e;
 $buttonHover: #a14741;
 $shadow: #374142;
 
 body {
-    background-image: url('../public/assets/stars.jpg')
+    background-image: url("../public/assets/stars.jpg");
 }
 
 .app {
@@ -25,6 +25,7 @@ body {
         width: 90%;
         font-weight: bold;
         margin-top: 2vh;
+        padding-bottom: 1vh;
 
         .title {
             text-transform: uppercase;
@@ -100,7 +101,7 @@ body {
 
 .block {
     background-color: $block;
-    box-shadow: 4px 5px 5px rgb(48, 48, 49);
+    margin-bottom: 5vh;
 }
 
 .button,
