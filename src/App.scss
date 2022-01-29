@@ -22,7 +22,7 @@ body {
     .form {
         text-align: center;
         margin: auto;
-        width: 90%;
+        width: fit-content;
         font-weight: bold;
         margin-top: 2vh;
         padding-bottom: 1vh;
@@ -33,7 +33,7 @@ body {
             font-size: 3vw;
 
             margin: auto;
-            padding: 1vh 4vw;
+            padding: 1vh 2vw;
         }
 
         label,
