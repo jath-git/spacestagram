@@ -24,17 +24,46 @@ export default function Image({ data, index, toggleLike }) {
         return false;
     }
 
+    const parseDate = date => {
+        const year = date.substring(0, 4);
+        const month = Number(date.substring(5, 7));
+        const day = date.substring(8);
+
+        const translateMonth = {
+            1: 'January',
+            2: 'February',
+            3: 'March',
+            4: 'April',
+            5: 'May',
+            6: 'June',
+            7: 'July',
+            8: 'August',
+            9: 'September',
+            10: 'October',
+            11: 'November',
+            12: 'December'
+        }
+
+        return `${translateMonth[month]} ${day}, ${year}`;
+    }
+
     return (
         <div>
-            {src ? <div className="imageHolder block">
-                <h1 className="center">{title ? title : 'No Name'}</h1>
-                {author ? <h2 className="center">From {author}</h2> : null}
+            {src ? <div className={like ? "activate imageHolder lightBlock" : "deactivate imageHolder lightBlock"}>
+                <div className="innerMain">
+                    <h1 className="imageTitle center">{title ? title : 'No Name'}</h1>
+                    {author ? <h2>From {author}</h2> : null}
+                    {date ? <h2>{parseDate(date)}</h2> : null}
+                </div>
                 {hasYoutube(src) ? <iframe title={index} allow="fullscreen" width="100%" height="250px" src={src} /> : <img src={src} alt="NASA" onClick={() => window.open(src, '_blank')} />}
-                {date ? <h2 className="right">{date}</h2> : null}
-                {description ? <h3>{description}</h3> : null}
-                <div className={like ? 'button' : 'disabled'} onClick={() => {
-                    toggleLike(index);
-                }}>{like ? 'Unlike' : 'Like'}</div>
+                <div className="inner">
+                    {description ? <h3>{description}</h3> : null}
+                </div>
+                <div className="innerSupport">
+                    <div className="button" onClick={() => {
+                        toggleLike(index);
+                    }}>{like ? 'Unlike' : 'Like'}</div>
+                </div>
             </div> : null}
         </div>
     )

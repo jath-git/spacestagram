@@ -97,11 +97,13 @@ class App extends Component {
   render = () => {
     return (
       <div className="app">
-        <div className="form block">
-          <h1 className="title">Planetary Spacestagram</h1>
-          <label>Start Date:</label>
-          <input type="date" ref={this.startDate} />
-          <div className="button" onClick={this.setStartDate}>Submit</div>
+        <div className="form">
+          <h1 className="title">Spacestagram</h1>
+          <div className="innerMain">
+            <label>Start Date</label>
+            <input type="date" ref={this.startDate} />
+            <div className="button" onClick={this.setStartDate}>Submit</div>
+          </div>
         </div>
 
         <div className="gram" >

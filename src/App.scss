@@ -3,7 +3,11 @@
 
 // theme colours
 $background: black;
-$block: lightgrey;
+$block: rgb(65, 19, 65);
+$deactivateBlock: rgb(99, 54, 99);
+$lightColour: rgb(148, 108, 148);
+$extraDarkColour: rgb(34, 22, 34);
+$darkColour: rgb(92, 31, 92);
 $button: #49686e;
 $buttonHover: #a14741;
 $shadow: #374142;
@@ -18,22 +22,46 @@ body {
     left: 0;
     position: absolute;
     width: 100%;
+    color: whitesmoke;
+
+    .innerMain,
+    .inner {
+        width: fit-content;
+        margin: auto;
+        border: black solid 1px;
+    }
+
+    .innerMain {
+        background-color: $lightColour;
+        text-transform: uppercase;
+    }
 
     .form {
         text-align: center;
         margin: auto;
-        width: fit-content;
+        width: 100%;
         font-weight: bold;
-        margin-top: 2vh;
         padding-bottom: 1vh;
+        text-transform: uppercase;
+        background: $block;
 
         .title {
-            text-transform: uppercase;
+            -webkit-text-stroke: 0.05vw $lightColour;
             text-align: center;
             font-size: 3vw;
+            color: $darkColour;
 
             margin: auto;
             padding: 1vh 2vw;
+        }
+
+        .innerMain {
+            padding: 1%;
+        }
+
+        label {
+            -webkit-text-stroke: 0.03vw black;
+            color: $darkColour;
         }
 
         label,
@@ -41,10 +69,11 @@ body {
         input {
             font-size: 1.5vw;
             font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-            // display: flex;
         }
 
         input {
+            font-family: "Courier New", Courier, monospace;
+            cursor: pointer;
             padding: 0 2vw;
             border: solid black 1px;
             margin-left: 1vw;
@@ -58,7 +87,15 @@ body {
 
     .gram {
         column-count: 3;
-        padding: 0 2vw;
+        width: 100%;
+
+        .activate {
+            background-color: $block;
+        }
+
+        .deactivate {
+            background-color: $deactivateBlock;
+        }
 
         .imageHolder {
             margin-top: 3vh;
@@ -67,14 +104,41 @@ body {
             padding: 2% 5%;
             display: inline-block;
 
+            .innerMain {
+                margin: auto;
+                margin-top: 3vh;
+                margin-bottom: 3vh;
+                text-align: center;
+                padding: 2.5%;
+                -webkit-text-stroke: 0.03vw black;
+                color: $darkColour;
+            }
+
+            .inner {
+                background-color: $extraDarkColour;
+                border: whitesmoke solid 0.5px;
+                padding: 4%;
+                margin: auto;
+                margin-top: 3vh;
+                margin-bottom: 1vh;
+                color: whitesmoke;
+                line-height: 1.7;
+                font-family: "Courier New", Courier, monospace;
+            }
+
+            .innerSupport {
+                background-color: $lightColour;
+                margin: auto;
+                margin-top: 3vh;
+                margin-bottom: 3vh;
+                padding-top: 4%;
+                padding-bottom: 1%;
+                border-radius: 20px;
+            }
+
             img {
                 width: 100%;
                 cursor: pointer;
-            }
-
-            .center {
-                text-align: center;
-                text-transform: capitalize;
             }
 
             .right {
@@ -99,13 +163,7 @@ body {
     }
 }
 
-.block {
-    background-color: $block;
-    margin-bottom: 5vh;
-}
-
-.button,
-.disabled {
+.button {
     font-size: 1.35vw;
     width: fit-content;
     margin: auto;
@@ -114,15 +172,14 @@ body {
     cursor: pointer;
     font-weight: bold;
     margin-bottom: 2vh;
+    background-color: $block;
+    -webkit-text-stroke: 0.05vw $lightColour;
+    text-transform: uppercase;
+    padding: 1vh 2vw;
 
     &:hover {
-        background-color: $buttonHover;
-        color: whitesmoke;
+        background-color: $extraDarkColour;
     }
-}
-
-.button {
-    background-color: $button;
 }
 
 .disabled {
