@@ -94,6 +94,22 @@ class App extends Component {
     setTimeout(() => localStorage.setItem('data', JSON.stringify(newData)), 0);
   }
 
+  deletePost = index => {
+    // delete post from data array
+    const newData = [];
+    for (let i = 0; i < this.state.data.length; ++i) {
+      if (i !== index) {
+        newData.push(this.state.data[i]);
+      }
+    }
+
+    this.setState({ data: newData });
+
+    // store new data
+    setTimeout(() => localStorage.setItem('data', JSON.stringify(newData)), 0);
+
+  }
+
   render = () => {
     return (
       <div className="app">
@@ -106,15 +122,16 @@ class App extends Component {
           </div>
         </div>
 
-        <div className="gram" >
+        {this.state.data && this.state.data.length > 0 ? <div className="gram" >
           {
             this.state.data.map((discard, index) => {
               return (
-                <Image data={this.state.data} key={index} index={index} toggleLike={this.toggleLike} />
+                <Image data={this.state.data} key={index} index={index} toggleLike={this.toggleLike} deletePost={this.deletePost} />
               )
             })
           }
         </div>
+          : <div className="error">Enter Valid Date to Load Posts</div>}
       </div>
     );
   }

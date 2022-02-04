@@ -85,6 +85,18 @@ body {
         }
     }
 
+    .error {
+        font-family: "Courier New", Courier, monospace;
+        background-color: $lightColour;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding: 2%;
+        text-transform: uppercase;
+        color: black;
+        font-size: 2vw;
+    }
+
     .gram {
         column-count: 3;
         width: 100%;
@@ -104,6 +116,11 @@ body {
             padding: 2% 5%;
             display: inline-block;
 
+            .image {
+                width: 100%;
+                cursor: pointer;
+            }
+
             .innerMain {
                 margin: auto;
                 margin-top: 3vh;
@@ -112,6 +129,15 @@ body {
                 padding: 2.5%;
                 -webkit-text-stroke: 0.03vw black;
                 color: $darkColour;
+
+                h1 {
+                    font-size: 2vw;
+                }
+
+                h2 {
+                    font-size: 1.35vw;
+                    font-weight: normal;
+                }
             }
 
             .inner {
@@ -124,40 +150,37 @@ body {
                 color: whitesmoke;
                 line-height: 1.7;
                 font-family: "Courier New", Courier, monospace;
+
+                h3 {
+                    font-size: 1.05vw;
+                    text-indent: 2vw;
+                    font-weight: normal;
+                }
             }
 
             .innerSupport {
                 background-color: $lightColour;
+                border: black solid 1px;
                 margin: auto;
                 margin-top: 3vh;
                 margin-bottom: 3vh;
                 padding-top: 4%;
                 padding-bottom: 1%;
-                border-radius: 20px;
-            }
+                text-align: center;
 
-            img {
-                width: 100%;
-                cursor: pointer;
-            }
+                img {
+                    width: 5vh;
+                    height: 5vh;
+                    margin: 0 1vw;
+                }
 
-            .right {
-                text-align: right;
-            }
+                .pointer {
+                    cursor: pointer;
+                }
 
-            h1 {
-                font-size: 2vw;
-            }
-
-            h2 {
-                font-size: 1.35vw;
-                font-weight: normal;
-            }
-
-            h3 {
-                font-size: 1.05vw;
-                text-indent: 2vw;
-                font-weight: normal;
+                .copy {
+                    cursor: copy;
+                }
             }
         }
     }

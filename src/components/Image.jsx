@@ -4,7 +4,7 @@
 import React from 'react'
 
 // block of nasa object with image and details
-export default function Image({ data, index, toggleLike }) {
+export default function Image({ data, index, toggleLike, deletePost }) {
     const { date, src, title, description, author, like } = data[index];
 
     const hasYoutube = string => {
@@ -55,14 +55,20 @@ export default function Image({ data, index, toggleLike }) {
                     {author ? <h2>From {author}</h2> : null}
                     {date ? <h2>{parseDate(date)}</h2> : null}
                 </div>
-                {hasYoutube(src) ? <iframe title={index} allow="fullscreen" width="100%" height="250px" src={src} /> : <img src={src} alt="NASA" onClick={() => window.open(src, '_blank')} />}
+                {hasYoutube(src) ? <iframe className="image" title={index} allow="fullscreen" width="100%" height="250px" src={src} /> : <img className="image" src={src} alt="NASA" onClick={() => window.open(src, '_blank')} />}
                 <div className="inner">
                     {description ? <h3>{description}</h3> : null}
                 </div>
                 <div className="innerSupport">
-                    <div className="button" onClick={() => {
+                    <img alt="like" className="pointer" onClick={() => {
                         toggleLike(index);
-                    }}>{like ? 'Unlike' : 'Like'}</div>
+                    }} src={like ? "./assets/heart-filled.png" : "./assets/heart-no-filled.png"} />
+                    <img alt="share" className="copy" onClick={() => {
+                        navigator.clipboard.writeText(src);
+                    }} src="./assets/share.png" />
+                    <img alt="trash" className="pointer" onClick={() => {
+                        deletePost(index);
+                    }} src="./assets/trash.png" />
                 </div>
             </div> : null}
         </div>
