@@ -26,7 +26,6 @@ body {
 
     .innerMain,
     .inner {
-        width: fit-content;
         margin: auto;
         border: black solid 1px;
     }
@@ -56,6 +55,7 @@ body {
         }
 
         .innerMain {
+            width: fit-content;
             padding: 1%;
         }
 
@@ -169,8 +169,8 @@ body {
                 text-align: center;
 
                 img {
-                    width: 5vh;
-                    height: 5vh;
+                    width: 2.5vw;
+                    height: 2.5vw;
                     margin: 0 1vw;
                 }
 
@@ -180,6 +180,10 @@ body {
 
                 .copy {
                     cursor: copy;
+                }
+
+                .zoom-in {
+                    cursor: zoom-in;
                 }
             }
         }
