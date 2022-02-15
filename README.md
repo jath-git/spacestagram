@@ -1,3 +1,5 @@
+### #1 Technology Practiced: JavaScript
+
 ### General Details
 - Web application, inspired by Instagram
 - Fetches from NASA's image API
