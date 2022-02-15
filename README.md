@@ -1,12 +1,11 @@
+This web application, inspired by Instagram, fetches from NASA's image API and displays a series of posts starting from a date given by the user. Each post has information about the image (e.g. title, date, author, description, etc.) and allows the user to interact with the post (like/dislike).
+
 ### This App is Deployed. See Live Site at:
 [https://image-spacestagram.netlify.app](https://image-spacestagram.netlify.app)
 
 ### Features:
 - Add Date-Picker (photos starting from a specific date)
 - Save Likes After 5 Seconds (user leaves or reloads)
-
-### View Backend Project at:
-[https://inventory-tracker-app.netlify.app](https://inventory-tracker-app.netlify.app)
 
 <br/>
 
