@@ -7,6 +7,3 @@
 ### Post Details
 - Each post has information about the image (e.g. title, date, author, description, etc.)
 - Allows the user to interact with the post (like/dislike).
-
-### This App is Deployed. See Live Site at:
-[https://image-spacestagram.netlify.app](https://image-spacestagram.netlify.app)
