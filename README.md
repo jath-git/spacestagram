@@ -7,10 +7,14 @@
 [linkedin-url]: https://linkedin.com/in/jathurshan-t
 
 <!-- project summary shields -->
-[contributors-shield]: https://img.shields.io/github/contributors/jath-git/spacestagram.svg?style=for-the-badge
-[contributors-url]: https://github.com/jath-git/spacestagram/graphs/contributors
-[stars-shield]: https://img.shields.io/github/stars/jath-git/spacestagram.svg?style=for-the-badge
-[stars-url]: https://github.com/jath-git/spacestagram/stargazers
+[gmail-shield]: https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[gmail-url]: mailto:theivikaran.jathurshan@gmail.com
+[outlook-shield]: https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white
+[outlook-url]: mailto:jtheiv@outlook.com
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://linkedin.com/in/jathurshan-t
+[github-shield]: https://img.shields.io/badge/GitHub-8631A9?style=for-the-badge&logo=github&logoColor=white
+[github-url]: https://github.com/jath-git?tab=repositories
 
 <!-- programming language shields -->
 [python-shield]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
@@ -27,6 +31,7 @@
 [![Gmail][gmail-shield]][gmail-url]
 [![Outlook][outlook-shield]][outlook-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![GitHub][github-shield]][github-url]
 
 <!-- project overview -->
 <br />
@@ -45,7 +50,7 @@
   </div>
   <!-- project description -->
     <p>
-    A ui/ux focused application inspired by Instagram that fetches from NASA's photo API and exhibits a series of posts. Posts include information about image (title, date, author, description, etc.) and allows user to like them.
+    An app that fetches from NASA's photo API, exhibits info about photos (i.e. title, date, author, description).
     <br />
     </p>
 </div>
